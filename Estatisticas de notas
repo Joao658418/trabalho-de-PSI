@@ -1,0 +1,4 @@
+input("Insira as tuas notas")
+notas=int(input("Insira tuas notas"))
+list=int(input("Insira tuas notas"))
+
