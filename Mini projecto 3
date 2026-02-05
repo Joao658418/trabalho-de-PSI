@@ -1,0 +1,47 @@
+# Lista onde os nomes serão guardados
+nomes = []
+
+while True:
+    print("\n=== Gestor de Nomes ===")
+    print("1 - Adicionar nome")
+    print("2 - Remover nome")
+    print("3 - Listar todos os nomes")
+    print("4 - Procurar um nome")
+    print("5 - Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        nome = input("Digite o nome a adicionar: ")
+        nomes.append(nome)
+        print(f"Nome '{nome}' adicionado com sucesso!")
+
+    elif opcao == "2":
+        nome = input("Digite o nome a remover: ")
+        if nome in nomes:
+            nomes.remove(nome)
+            print(f"Nome '{nome}' removido com sucesso!")
+        else:
+            print("Nome não encontrado.")
+
+    elif opcao == "3":
+        if len(nomes) == 0:
+            print("A lista está vazia.")
+        else:
+            print("Lista de nomes:")
+            for n in nomes:
+                print("-", n)
+
+    elif opcao == "4":
+        nome = input("Digite o nome a procurar: ")
+        if nome in nomes:
+            print(f"O nome '{nome}' está na lista.")
+        else:
+            print(f"O nome '{nome}' não foi encontrado.")
+
+    elif opcao == "5":
+        print("Programa encerrado.")
+        break
+
+    else:
+        print("Opção inválida. Tente novamente.")
